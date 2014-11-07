@@ -11,11 +11,14 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-sourcefiles = ["hello_world_wrapper.pyx"]
+#sourcefiles = ["hello_world_wrapper.pyx"]
+sourcefiles = ["greatCircCalc_wrapper.pyx"]
+name1 = "hello_world_wrapper"
+name2 = "greatCircCalc_wrapper"
 
 setup(
     cmdclass = {"build_ext" : build_ext},
-    ext_modules = [Extension("hello_world_wrapper",
+    ext_modules = [Extension(name2,
             sourcefiles,
             include_dirs = ["."],
                         language = 'c++',

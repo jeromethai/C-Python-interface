@@ -12,6 +12,8 @@
 #include"Stack.h"
 #include"reverseWords.h"
 #include"hello_world.h"
+#include"greatCircleCalculation.h"
+
 
 int main( int argc, char ** argv ) {
     version();
@@ -19,6 +21,7 @@ int main( int argc, char ** argv ) {
     testStack();
     testReverseWords();
     print_hw();
+    run_great_circ_calc();
 	return 0;
 }
 
