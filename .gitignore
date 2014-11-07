@@ -1,3 +1,7 @@
 /Debug
 .cproject
 .project
+/Debug
+/Debug
+*.o
+.pydevproject

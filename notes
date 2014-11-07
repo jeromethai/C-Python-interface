@@ -1,0 +1,8 @@
+-----
+Notes
+-----
+
+- running the .pyx file will create the a corresponding .cpp with the same name
+- make sure that there does not exists another .cpp of the same name
+- for the setup.py, make sure to include all the necessary source files (.pyx and .cpp only)
+- to compile c++ code do: : g++ source1.cpp source2.cpp -o name_exec
