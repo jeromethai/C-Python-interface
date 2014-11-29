@@ -48,23 +48,38 @@ constains the first index of each block and n the length of the array
 }
 
 
+void proj_multi_l1ball_hack(double *y, double *blocks, int numblocks, int n) {
+/*
+Do multiple projections where blocks is an array of integers that
+constains the first index of each block and n the length of the array
+*/
+    int i;
+    for (i = 0; i < numblocks-1; i++) {
+        proj_l1ball(y, (int)floor(blocks[i]), (int)floor(blocks[i+1]));
+    } 
+    proj_l1ball(y, (int)floor(blocks[numblocks-1]), n);
+}
+
+
 int testArray() {
 
     double doubleArray[SIZE] = {5.352, 3.23, 32.78, -1.234, 1.7, 104., 53.};
+    int blocks[] = {0, 2, 4};
 
-    proj_l1ball(doubleArray, 2, 4);
-    cout << "Projected vector is this." << endl;
+    proj_multi_l1ball(doubleArray, blocks, 3, 7);
+    cout << "Projected block-vector is this." << endl;
     for (size_t i = 0; i != SIZE; ++i)
         cout << doubleArray[i] << " ";
         cout << endl;
 
     double doubleArray2[SIZE] = {5.352, 3.23, 32.78, -1.234, 1.7, 104., 53.};
-    int blocks[] = {0, 2, 4};
+    double blocks2[] = {0., 2., 4.};
 
-    proj_multi_l1ball(doubleArray2, blocks, 3, 7);
+    proj_multi_l1ball_hack(doubleArray2, blocks2, 3, 7);
     cout << "Projected block-vector is this." << endl;
     for (size_t i = 0; i != SIZE; ++i)
         cout << doubleArray2[i] << " ";
         cout << endl;
+
     return 0;
 }
