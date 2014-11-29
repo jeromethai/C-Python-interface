@@ -13,15 +13,17 @@
 #include"reverseWords.h"
 #include"hello_world.h"
 #include"greatCircleCalculation.h"
+#include"arrays.h"
 
 
 int main( int argc, char ** argv ) {
-    version();
-    testLinkedList();
-    testStack();
-    testReverseWords();
-    print_hw();
-    run_great_circ_calc();
+    //version();
+    //testLinkedList();
+    //testStack();
+    //testReverseWords();
+    //print_hw();
+    //run_great_circ_calc();
+	testArray();
 	return 0;
 }
 

@@ -28,7 +28,7 @@ protected:
 	in other classes which inherit from that class.
 	Here, we only need the element internally*/
     struct Element { // Struct is same as class but used for simple classes in practice
-    	struct Element *next; //poit to a object Element
+    	struct Element *next; //point to a object Element
     	int data;
     };
     Element *head; // The stack is just a pointer to the head of the stack

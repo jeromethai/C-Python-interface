@@ -6,3 +6,27 @@ Notes
 - make sure that there does not exists another .cpp of the same name
 - for the setup.py, make sure to include all the necessary source files (.pyx and .cpp only)
 - to compile c++ code do: : g++ source1.cpp source2.cpp -o name_exec
+
+————————————————-
+Different steps in l1-projection:
+————————————————-
+
+do everything in the terminal, it does’t work on eclipse
+
+compile C++ code: 
+>>> g++ main.cpp -o program
+
+run the compilation: 
+>>> ./program
+
+create .pyx python file that calls the .h file in c-code
+try to include as much c-code as possible, especially the loops
+
+- edit the setup.py so that it includes all the sourcefiles
+- creates an executable .so that has the same name as .pyx file given in the 1st argument of Extension
+- run
+>>> python setup.py build_ext --inplace 
+- it will create a .cpp that has the same name as the .pyx
+- make sure that the .cpp does not already exist
+- now you can call the c code with import of the .pyx file
+

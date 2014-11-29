@@ -1,5 +1,5 @@
 '''
-Created on 5 nov. 2013
+Created on 5 nov. 2014
 
 Example of C++11 wrapping with cython.
 Compile with python setup.py build_ext --inplace
