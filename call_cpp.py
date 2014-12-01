@@ -1,8 +1,8 @@
 
 '''
-Created on 5 nov. 2013
+Created on 5 nov. 2014
 
-@author: francois belletti
+@author: jerome thai
 '''
 
 from hello_world_wrapper import cython_print
